@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.localflavor.fr.forms import us
+from localflavor.us.models import PhoneNumberField, USStateField
 
 
 class location(models.Model):
@@ -9,8 +9,8 @@ class location(models.Model):
 
 class manufacturer(models.Model):
     name = models.CharField(max_length=50)
-    hq_state = us.models.USStateField
-    contact_phone = us.models.PhoneNumberField
+    hq_state = USStateField()
+    contact_phone = PhoneNumberField()
 
 
 class part(models.Model):
@@ -20,14 +20,14 @@ class part(models.Model):
 
 class organization(models.Model):
     name = models.CharField(max_length=100)
-    contact_phone = us.models.PhoneNumberField
+    contact_phone = PhoneNumberField()
 
 
 class asset(models.Model):
     location = models.ForeignKey(location)
     organization = models.ForeignKey(organization)
     manufacturer = models.ForeignKey(manufacturer)
-    part = models.ForeignKey(manufacturer)
+    part = models.ForeignKey(part)
     description = models.CharField(max_length=400)
     implemented = models.DateField(auto_now=True)
     notes = models.CharField(max_length=400)
