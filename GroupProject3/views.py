@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from forms import assetForm
 
 
 def index(request):
-    return HttpResponse('Static text')
+    context = {}
+    context['form'] = assetForm()
+    return render(request, 'index.html', context)

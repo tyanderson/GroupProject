@@ -26,6 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DEFAULT_CONTENT_TYPE = 'text/html'
 
 # Application definition
 
