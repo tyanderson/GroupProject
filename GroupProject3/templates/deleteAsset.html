@@ -5,14 +5,14 @@
 
 	<form  action="{{asset.id}}" method="POST">
 		<div class="text-center">
-			<div><label>Asset Name</label>{{asset.name}}</div>
-			<div><label>Location Name</label>{{asset.location}}</div>		
-			<div><label>Organization Name</label>{{asset.organization}}</div>
-			<div><label>Manufacturer Name</label>{{asset.manufacturer}}</div>
-			<div><label>Description</label>{{asset.description}}</div>
-			<div><label>Date Implemented</label>{{asset.implemented}}</div>
-			<div><label>Notes</label>{{asset.notes}}</div>
-			<input type="submit" value="Submit">
+			<div><label>Asset Name: &nbsp</label>{{asset.name}}</div>
+			<div><label>Location Name: &nbsp</label>{{asset.location}}</div>		
+			<div><label>Organization Name:&nbsp </label>{{asset.organization}}</div>
+			<div><label>Manufacturer Name:&nbsp </label>{{asset.manufacturer}}</div>
+			<div><label>Description:&nbsp </label>{{asset.description}}</div>
+			<div><label>Date Implemented:&nbsp </label>{{asset.implemented}}</div>
+			<div><label>Notes:&nbsp </label>{{asset.notes}}</div>
+			<input type="submit" class="btn btn-danger" value="Yes I want to delete this permenantly.">
 		</div>
 	</form>
 {% endblock %}

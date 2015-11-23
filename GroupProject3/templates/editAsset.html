@@ -3,14 +3,14 @@
 {% block content %}
 	<form  action="{{asset.id}}" method="post">
 		<div class="text-center">
-			<div><label>Asset Name</label>{{form.name}}</div>
-			<div><label>Location Name</label>{{form.location}}</div>		
-			<div><label>Organization Name</label>{{form.organization}}</div>
-			<div><label>Manufacturer Name</label>{{form.manufacturer}}</div>
-			<div><label>Description</label>{{form.description}}</div>
-			<div><label>Date Implemented</label>{{form.implemented}}</div>
-			<div><label>Notes</label>{{form.notes}}</div>
-			<input type="submit" value="Submit">
+			<div><label>Asset Name: </label>{{form.name}}</div>
+			<div><label>Location Name: </label>{{form.location}}</div>		
+			<div><label>Organization Name: </label>{{form.organization}}</div>
+			<div><label>Manufacturer Name: </label>{{form.manufacturer}}</div>
+			<div><label>Description: </label>{{form.description}}</div>
+			<div><label>Date Implemented: </label>{{form.implemented}}</div>
+			<div><label>Notes: </label>{{form.notes}}</div>
+			<input type="submit" class="btn btn-info" value="Submit Edits">
 		</div>
 	</form>
 {% endblock %}
