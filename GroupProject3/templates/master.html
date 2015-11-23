@@ -20,12 +20,28 @@
   </head>
 
   <body>
-    <a href="/GroupProject3/">
-      <h1 class="text-center">
-        Welcome to your asset manager!
-      </h1>
-    </a>
-
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Asset Manager</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/GroupProject3/">Home</a></li>
+            <li><a href="/GroupProject3/">Asset List</a></li>
+            <li><a href="/GroupProject3/manufacturers">Manufacturers</a></li>
+            <li><a href="/GroupProject3/organizations">Organizations</a></li>
+            <li><a href="/GroupProject3/locations">Locations</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     {% block  content %}
       Site content goes here in sub-templateasdfasdf asdfasds.

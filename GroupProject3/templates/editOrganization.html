@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2 class="text-center">Edit Organization </h2>
+	<form  action="{{organization.id}}" method="post">
+		<div class="text-center">
+			<div><label>Name: </label>{{form.name}}</div>
+			<div><label>Phone Number: </label>{{form.contact_phone}}</div>		
+			<input type="submit" class="btn btn-info" value="Submit Edits">
+		</div>
+	</form>
+{% endblock %}

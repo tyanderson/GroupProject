@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2 class="text-center">Add Manufacturer</h2>
+	<form  action="GroupProject3/addManufacturer/" method="post">
+		<div class="text-center">
+			<div><label>Name</label>{{form.name}}</div>
+			<div><label>Headquarters State</label>{{form.hq_state}}</div>
+			<div><label>Phone Number</label>{{form.contact_phone}}</div>		
+
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+{% endblock %}

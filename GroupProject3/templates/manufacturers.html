@@ -1,0 +1,33 @@
+{% extends "master.html" %}
+
+{% block content %}
+<div class="col-md-1"></div>
+    <div class="col-md-10">
+    	<h2 class="text-center">Manufacturers</h2>
+    	    	<br>
+    	<form class="text-right">
+        	<a href="/GroupProject3/addManufacturer/" class="btn btn-info">Add Manufacturer</a>
+    	</form>
+    	<br>
+		<table class="table table-striped table-bordered info" style="width:100%">
+			<tr class="">
+				<th>Name</th>
+				<th>Headquarters State</th> 
+		    	<th>Phone Number</th> 
+		    	<th>Actions</th>
+			</tr>
+		{% for manufacturer in manufacturers%}
+		  <tr>
+		    <td>{{ manufacturer.name}}</td>
+		    <td>{{ manufacturer.hq_state}}</td>
+		    <td>{{ manufacturer.contact_phone}}</td>
+		    <td>
+		    	<a href="/GroupProject3/editManufacturer/{{ manufacturer.id }}">Edit <i class="glyphicon glyphicon-pencil"></i></a>
+		    	<br> 
+		    	<a href="/GroupProject3/deleteManufacturer/{{ manufacturer.id }}">Delete <i class="glyphicon glyphicon-trash"></i></a>
+		    </td>
+		  </tr>
+		{% endfor %}
+		</table>
+	</div>
+{% endblock %}

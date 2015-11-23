@@ -8,3 +8,23 @@ class assetForm(forms.ModelForm):
 		model = models.asset
 		fields = '__all__'
 
+
+class organizationForm(forms.ModelForm):
+
+	class Meta:
+		model = models.organization
+		fields = '__all__'
+
+
+class locationForm(forms.ModelForm):
+
+	class Meta:
+		model = models.location
+		fields = '__all__'
+
+
+class manufacturerForm(forms.ModelForm):
+
+	class Meta:
+		model = models.manufacturer
+		fields = '__all__'

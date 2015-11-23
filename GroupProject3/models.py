@@ -32,6 +32,7 @@ class asset(models.Model):
     location = models.ForeignKey(location)
     organization = models.ForeignKey(organization)
     manufacturer = models.ForeignKey(manufacturer)
+    part_number = models.IntegerField()
     description = models.TextField()
     implemented = models.DateField()
     notes = models.TextField()

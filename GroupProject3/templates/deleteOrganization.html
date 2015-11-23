@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2 class="text-center">Are you sure you want to delete this organization?</h2>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+	<form  action="{{organization.id}}" method="POST">
+		<div class="">
+			<div>
+				<label>Name: &nbsp</label>
+				<div class="pull-right">{{organization.name}}</div>
+			</div>
+			<div>
+				<label>Phone Number: &nbsp</label>
+				<div class="pull-right">{{organization.contact_phone}}</div>
+			</div>	
+			<input type="submit" class="btn btn-danger center-block" value="Yes, I want to delete this permenantly.">
+		</div>
+	</form>
+</div>
+<div class="col-md-4"></div>
+{% endblock %}

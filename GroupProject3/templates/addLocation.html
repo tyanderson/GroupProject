@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2 class="text-center">Add Location</h2>
+	<form  action="GroupProject3/addLocation/" method="post">
+		<div class="text-center">
+			<div><label>Name</label>{{form.name}}</div>
+			<div><label>Office Number</label>{{form.office_number}}</div>		
+
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+{% endblock %}
