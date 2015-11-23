@@ -4,7 +4,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
     	<form class="text-right">
-        	<a href="/addAsset/" class="btn btn-info">Add Asset</a>
+        	<a href="/GroupProject3/addAsset/" class="btn btn-info">Add Asset</a>
     	</form>
     	<br>
 		<table class="table table-striped table-bordered info" style="width:100%">
@@ -25,7 +25,11 @@
 		    <td>{{ asset.description}}</td>
 		    <td>{{ asset.implemented}}</td>
 		    <td>{{ asset.notes}}</td>
-		    <td>Edit <i class="glyphicon glyphicon-pencil"></i><br> Delete <i class="glyphicon glyphicon-trash"></i></td>
+		    <td>
+		    	<a href="/GroupProject3/editAsset/{{ asset.id }}">Edit <i class="glyphicon glyphicon-pencil"></i></a>
+		    	<br> 
+		    	<a href="/GroupProject3/deleteAsset/{{ asset.id }}">Delete <i class="glyphicon glyphicon-trash"></i></a>
+		    </td>
 		  </tr>
 		{% endfor %}
 		</table>

@@ -1,10 +1,10 @@
-from django.forms import ModelForm
-import models as md
+from django import forms
+from GroupProject3 import models
 
 
-class assetForm(ModelForm):
+class assetForm(forms.ModelForm):
 
-    class Meta:
-        model = md.asset
-        fields = ['location', 'organization', 'manufacturer', 'part',
-                       'description', 'implemented', 'notes']
+	class Meta:
+		model = models.asset
+		fields = '__all__'
+

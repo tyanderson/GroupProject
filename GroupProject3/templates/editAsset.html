@@ -1,7 +1,7 @@
 {% extends "master.html" %}
 
 {% block content %}
-	<form  action="GroupProject3/addAsset/" method="post">
+	<form  action="GroupProject3/editAsset/{{asset.id}}/" method="post">
 		<div class="text-center">
 			<div><label>Asset Name</label>{{form.name}}</div>
 			<div><label>Location Name</label>{{form.location}}</div>		

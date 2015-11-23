@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2 class="text-center">Are you sure you want to do this?</h2>
+
+	<form  action="GroupProject3/deleteAsset/{{asset.id}}" method="POST">
+		<div class="text-center">
+			<div><label>Asset Name</label>{{asset.name}}</div>
+			<div><label>Location Name</label>{{asset.location}}</div>		
+			<div><label>Organization Name</label>{{asset.organization}}</div>
+			<div><label>Manufacturer Name</label>{{asset.manufacturer}}</div>
+			<div><label>Description</label>{{asset.description}}</div>
+			<div><label>Date Implemented</label>{{asset.implemented}}</div>
+			<div><label>Notes</label>{{asset.notes}}</div>
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+{% endblock %}
