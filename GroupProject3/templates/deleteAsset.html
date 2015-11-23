@@ -3,7 +3,7 @@
 {% block content %}
 <h2 class="text-center">Are you sure you want to do this?</h2>
 
-	<form  action="GroupProject3/deleteAsset/{{asset.id}}" method="POST">
+	<form  action="{{asset.id}}" method="POST">
 		<div class="text-center">
 			<div><label>Asset Name</label>{{asset.name}}</div>
 			<div><label>Location Name</label>{{asset.location}}</div>		
