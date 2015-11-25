@@ -2,17 +2,17 @@
 
 {% block content %}
 <h2 class="text-center">Add Asset</h2>
-	<form  action="GroupProject3/addAsset/" method="post">
-		<div class="text-center">
-			<div><label>Asset Name</label>{{form.name}}</div>
-			<div><label>Location Name</label>{{form.location}}</div>		
-			<div><label>Organization Name</label>{{form.organization}}</div>
-			<div><label>Manufacturer Name</label>{{form.manufacturer}}</div>
-			<div><label>Manufacturer Part Number</label>{{form.part_number}}</div>
-			<div><label>Description</label>{{form.description}}</div>
-			<div><label>Date Implemented</label>{{form.implemented}}</div>
-			<div><label>Maintenance Notes</label>{{form.notes}}</div>
-			<input type="submit" value="Submit">
+	<form action="GroupProject3/addAsset/" method="post">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="form-group"><label>Asset Name</label>{{form.name}}</div>
+			<div class="form-group"><label>Location Name</label>{{form.location}}</div>
+			<div class="form-group"><label>Organization Name</label>{{form.organization}}</div>
+			<div class="form-group"><label>Manufacturer Name</label>{{form.manufacturer}}</div>
+			<div class="form-group"><label>Manufacturer Part Number</label>{{form.part_number}}</div>
+			<div class="form-group"><label>Description</label>{{form.description}}</div>
+			<div class="form-group"><label>Date Implemented</label>{{form.implemented}}</div>
+			<div class="form-group"><label>Maintenance Notes</label>{{form.notes}}</div>
+			<input class="btn btn-info" type="submit" value="Submit">
 		</div>
 	</form>
 {% endblock %}
