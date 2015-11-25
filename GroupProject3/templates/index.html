@@ -4,9 +4,19 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
     	<h2 class="text-center">Assets</h2>
-       	<form class="text-right">
-        	<a href="/GroupProject3/addAsset/" class="btn btn-info">Add Asset</a>
-    	</form>
+        <div class="col-md-3 col-md-offset-8" style="padding-bottom:10px;">
+            <div class="input-group">
+                <form action="/GroupProject3/searchAssets/" method="post">
+                    <input type="text" class="form-control" placeholder="Search for..." name="searchString">
+                    <span class="input-group-btn" style="display:block; ">
+                            <input class="btn btn-default" value="Go" type="submit">Go</input>
+                    </span>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <a href="/GroupProject3/addAsset/" class="btn btn-info">Add Asset</a>
+        </div>
     	<br>
 		<table class="table table-striped table-hover table-bordered info">
 			<tr class="">

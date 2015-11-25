@@ -4,14 +4,12 @@ from .forms import assetForm, organizationForm, locationForm, manufacturerForm
 from django.views.generic.edit import UpdateView
 
 
-
 def index(request):
     context = {}
     assets = mod.asset.objects.all()
 
     context['assets'] = assets
     return render(request, 'index.html', context)
-
 
 
 def addAsset(request):
@@ -49,6 +47,16 @@ def editAsset(request, int):
 
     return render(request, 'editAsset.html', context)
 
+
+def searchAssets(request):
+    context = {}
+    print("got in")
+    if request.META['REQUEST_METHOD'] == 'POST':
+        print("searching")
+        str = request.POST.get('searchString')
+        context['assets'] = mod.asset.objects.all().filter(name__icontains=str)
+
+    return render(request, 'index.html', context)
 
 
 def deleteAsset(request, int):
@@ -118,7 +126,6 @@ def editManufacturer(request, int):
     return render(request, 'editManufacturer.html', context)
 
 
-
 def deleteManufacturer(request, int):
     context = {}
     if request.META['REQUEST_METHOD'] == 'POST':
@@ -183,7 +190,6 @@ def editOrganization(request, int):
     context['form'] = form
 
     return render(request, 'editOrganization.html', context)
-
 
 
 def deleteOrganization(request, int):
@@ -253,7 +259,6 @@ def editLocation(request, int):
     return render(request, 'editLocation.html', context)
 
 
-
 def deleteLocation(request, int):
     context = {}
     if request.META['REQUEST_METHOD'] == 'POST':
@@ -272,3 +277,4 @@ def deleteLocation(request, int):
     context['form'] = form
 
     return render(request, 'deleteLocation.html', context)
+

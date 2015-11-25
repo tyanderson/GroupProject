@@ -9,8 +9,8 @@ class assetForm(forms.ModelForm):
 		fields = '__all__'
 		widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-			'location': forms.TextInput(attrs={'class': 'form-control'}),
-			'organization': forms.TextInput(attrs={'class': 'form-control'}),
+			'location': forms.Select(attrs={'class': 'form-control'}),
+			'organization': forms.Select(attrs={'class': 'form-control'}),
 			'manufacturer': forms.Select(attrs={'class': 'form-control'}),
 			'part_number': forms.NumberInput(attrs={'class': 'form-control'}),
 			'description': forms.Textarea(attrs={'class': 'form-control'}),

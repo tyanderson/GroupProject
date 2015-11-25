@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^addAsset/', views.addAsset, name='addAsset'),
     url(r'^editAsset/([0-9]+$)', views.editAsset, name='editAsset'),
     url(r'^deleteAsset/([0-9]+$)', views.deleteAsset, name='deleteAsset'),
+    url(r'^searchAssets/', views.searchAssets, name='searchAssets'),
 
     url(r'^manufacturers/', views.manufacturers, name='manufacturers'),
     url(r'^addManufacturer/', views.addManufacturer, name='addManufacturer'),
