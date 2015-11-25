@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+# urls
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^addAsset/', views.addAsset, name='addAsset'),
@@ -22,4 +23,7 @@ urlpatterns = [
     url(r'^addLocation/', views.addLocation, name='addLocation'),
     url(r'^editLocation/([0-9]+$)', views.editLocation, name='editLocation'),
     url(r'^deleteLocation/([0-9]+$)', views.deleteLocation, name='deleteLocation'),
+
+    url(r'^login/', views.login, name='login'),
+    url(r'^logout/', views.logout, name='logout'),
 ]

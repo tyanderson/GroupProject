@@ -1,0 +1,25 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+    <div class="col-md-offset-4 col-md-4">
+            <form method="post" action="/GroupProject3/login/">
+                <h2 class="form-signin-heading">Please sign in</h2>
+                <div>
+                    <label for="username" class="sr-only">Username</label>
+                    <input type="text" class="form-control" placeholder="Username" name="username" required="" autofocus="">
+                </div>
+                <div>
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password" required="">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </form>
+            <br>
+            {% if failed %}
+                <div class="alert alert-danger" role="alert">Authentication failed</div>
+            {% endif %}
+
+        </div>
+
+{% endblock %}

@@ -12,6 +12,8 @@ django.setup()
 import GroupProject3.models as bmod
 from django.db import connection
 import subprocess
+from django.contrib.auth.models import User
+
 
 # DROP DATABASE, RECREATE IT, THEN MIGRATE IT #
 
@@ -21,6 +23,10 @@ cursor.execute("PRAGMA writable_schema = 1;")
 cursor.execute("delete from sqlite_master where type in ('table', 'index', 'trigger');")
 subprocess.call([sys.executable, "manage.py", "migrate"])
 
+# Create new user
+user = User.objects.create_user('thefinestcatsintown', 'admin@admin.com', 'thefinestcatsintown')
+
+# create location data
 for data in [
     {'name':          'Seattle',
      'office_number': 1,},
@@ -42,6 +48,7 @@ for data in [
 
 print('Locations initialized')
 
+# create manufacturer data
 for data in [
     {'name':          'Apple',
      'hq_state': 'CA',
@@ -67,6 +74,7 @@ for data in [
 
 print('Manufacturer initialized')
 
+# create organization data
 for data in [
     {'name':          'Cody',
      'contact_phone': '1234567890',},
@@ -88,7 +96,7 @@ for data in [
 
 print('Organizations initialized')
 
-
+# create asset data
 for data in [
     {'name':          'Ethernet Cable',
     'location': bmod.location.objects.get(office_number = 1),

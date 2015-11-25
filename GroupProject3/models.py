@@ -2,6 +2,7 @@ from django.db import models
 from localflavor.us.models import PhoneNumberField, USStateField
 
 
+# office location model
 class location(models.Model):
     name = models.CharField(max_length=50)
     office_number = models.IntegerField()
@@ -10,6 +11,7 @@ class location(models.Model):
         return (self.name)
 
 
+# manufacturers model
 class manufacturer(models.Model):
     name = models.CharField(max_length=50)
     hq_state = USStateField()
@@ -19,6 +21,7 @@ class manufacturer(models.Model):
         return self.name
 
 
+# internal organization model
 class organization(models.Model):
     name = models.CharField(max_length=100)
     contact_phone = PhoneNumberField()
@@ -27,6 +30,7 @@ class organization(models.Model):
         return self.name
 
 
+# model for assets
 class asset(models.Model):
     name = models.CharField(max_length=50)
     location = models.ForeignKey(location)
