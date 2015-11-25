@@ -62,11 +62,11 @@ WSGI_APPLICATION = 'GroupProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'database'
-        'user': 'user'
-        'password': 'password'
-        'host': 'groupproject3db.cqajxnuleie9.us-west-2.rds.amazonaws.com'
-        'port': '3306'
+        'NAME': 'database',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'groupproject3db.cqajxnuleie9.us-west-2.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
